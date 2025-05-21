@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+:root {
+  --color-white-100: hsl(206, 5%, 100%);
+  --color-white-200: hsl(206, 5%, 90%);
+  --color-black-200: hsl(213, 23%, 8%);
+  --color-black-300: hsl(214, 21%, 6%);
+  --color-black-500: hsl(216, 22%, 4%);
+  --color-blue-600: hsl(221, 83%, 53%);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-black-500);
+  color: var(--color-white-100);
+}
+
+/* HERO & BANNER */
+.section {
+  padding: 6rem 1rem 0rem;
+}
+
+.banner-column {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .banner-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.banner-image {
+  max-width: 18rem;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .banner-image {
+    max-width: 25rem;
+  }
+}
+
+.banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.heading-xl {
+  font-size: clamp(2.648rem, 6vw, 4.241rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.paragraph {
+  color: var(--color-white-200);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--color-black-200);
+  color: var(--color-white-100);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Animation glitch de base */
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitchTop {
+  2%, 64% {
+    transform: translate(2px, -2px);
+  }
+  4%, 60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+@keyframes glitchBottom {
+  2%, 64% {
+    transform: translate(-2px, 2px);
+  }
+  4%, 60% {
+    transform: translate(2px, 0px);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+
+/* Titre principal */
+.hero-title {
+  position: relative;
+  z-index: 2;
+  font-size: 3.5vw;
+  font-weight: 900;
+  font-family: Arial Black, Impact, sans-serif;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* Texte glitch SERGIO */
+.sergio {
+  position: relative;
+  display: block;
+  color: #ffbde6;
+  -webkit-text-stroke: 1px #ff33aa;
+  font-weight: 900;
+  font-size: 4vw;
+  text-shadow: 0 0 5px #ff33aa, 0 0 10px #ff33aa, 0 0 15px #ff33aa;
+  
+}
+
+
+
+/* Texte glitch TELMO */
+.telmo {
+  position: relative;
+  display: block;
+  color: #d3bfff;
+  -webkit-text-stroke: 1px #4b0082;
+  font-weight: 900;
+  font-size: 2.5vw;
+  text-shadow: 0 0 5px #7a38b7, 0 0 10px #7a38b7, 0 0 15px #7a38b7;
+  animation: glitch 10s linear infinite;
+}
+
+.telmo::before,
+.telmo::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #d3bfff;
+}
+
+.telmo::before {
+  animation: glitchTop 3s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.telmo::after {
+  animation: glitchBottom 3s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+
+/* Réseaux sociaux */
+.banner-links {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: grid;
+  justify-items: center;
+  row-gap: 0.75rem;
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.banner-links a {
+  font-size: 1.25rem;
+  color: var(--color-white-100);
+  transition: color 0.3s ease;
+}
+
+.banner-links a:hover {
+  color: var(--color-blue-600);
+}
+
+.banner-links::before,
+.banner-links::after {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 1.5px;
+  background: var(--color-white-100);
+  transform: rotate(90deg);
+}
+
+.banner-links::before {
+  top: -3rem;
+}
+
+.banner-links::after {
+  bottom: -3rem;
+}

@@ -1,0 +1,38 @@
+.agenda-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  
+  color: #fff;
+}
+
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.agenda-item {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #1a1a1a;
+}
+
+.agenda-date {
+  font-weight: bold;
+  color: #ff00c7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.agenda-name {
+  font-size: 1.2rem;
+}
+
+.agenda-place {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
