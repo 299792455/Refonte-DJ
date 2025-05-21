@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import { useState } from 'react';
 //import Image from "next/image";
 import "../../styles/HeroTest.css";
+import ContactForm from "../Contact";
 
 export default function HeroTest() {
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     const burgerMenu = document.getElementById("burger");
     const navbarMenu = document.getElementById("menu");
@@ -63,16 +66,17 @@ export default function HeroTest() {
 
             <div className="banner-inner">
               <h1 className="hero-title">
-        <span className="sergio" data-text="SERGIO">SERGIO</span>
-        <span className="telmo" data-text="Telmo">Telmo</span>
-      </h1>
-              <p className="paragraph">
-                Los sueños se ven lejanos, pero cada beat que creo es un paso más cerca de hacerlos sonar en todo el mundo.
-              </p>
-              
-              <button className="btn btn-darken btn-inline">
-                My Beats<i className="bx bx-right-arrow-alt"></i>
-              </button>
+                <span className="sergio" data-text="SERGIO">SERGIO</span>
+                <span className="telmo" data-text="Telmo">Telmo</span>
+              </h1>
+              <div className="bio-block">
+                <p className="line">DJ desde los <strong>14 años</strong>, ahora <strong>22</strong>.</p>
+                <p className="line">Residente en <strong>Sky Pub</strong> — A Estrada.</p>
+                <p className="line">Shows: <strong>Santiago, Pontevedra, Ourense</strong>.</p>
+                <p className="line">Producción en <strong>FL Studio</strong> — mashups & edits.</p>
+                
+              </div>
+              <button className="btn btn-darken btn-inline" onClick={() => setShowModal(true)}>Contactar<i className="bx bx-right-arrow-alt"></i></button>
             </div>
             <div className="banner-links">
               <a href="#"><i className="bx bxl-facebook"></i></a>
@@ -81,6 +85,14 @@ export default function HeroTest() {
               <a href="#"><i className="bx bxl-youtube"></i></a>
             </div>
           </div>
+          {showModal && (
+                  <div className="bio-modal-overlay" onClick={() => setShowModal(false)}>
+                    <div className="bio-modal" onClick={(e) => e.stopPropagation()}>
+                      <button className="bio-modal-close" onClick={() => setShowModal(false)}>✕</button>
+                      <ContactForm />
+                    </div>
+                  </div>
+                )}
         </section>
       </main>
     </>

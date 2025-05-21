@@ -72,15 +72,15 @@
 }
 
 .line.highlight {
-  color: #00ff94;
+  color: #050405;
   font-weight: bold;
 }
 
 .bio-contact-btn {
   margin-top: 1rem;
   background: none;
-  border: 2px solid #00ff94;
-  color: #00ff94;
+  border: 2px solid #7a38b7;
+  color: #ff33aa;
   padding: 10px 25px;
   font-size: 0.85rem;
   text-transform: uppercase;

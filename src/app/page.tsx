@@ -12,10 +12,12 @@ import Bio from '@/components/Bio';
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <FancyAudioPlayer />
-      <EventPosterGrid />
       <Bio />
+    
+      <FancyAudioPlayer />
+      <Hero />
+      <EventPosterGrid />
+      
      
     </main>
   );
