@@ -16,15 +16,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  min-height: 40vh;
+  height: auto;
   width: 100%;
- 
+ max-width: 1440px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   animation: slidein 120s forwards infinite alternate;
-  padding: 2rem;
+  margin: auto;
+  padding: 3rem; 
+  margin-bottom: 4rem;
 }
-
+.hero-block {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 @keyframes slidein {
   0%, 100% {
     background-position: 20% 0%;
@@ -37,7 +46,7 @@
 }
 
 .album-cover {
-  width: 90%;
+  width:100%;
   margin-bottom: 2rem;
 }
 
@@ -48,7 +57,7 @@
 
 .swiper-slide {
   position: relative;
-  max-width: 200px;
+  max-width: 250px;
   aspect-ratio: 1/1;
   border-radius: 10px;
 }
@@ -170,4 +179,26 @@
 
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
+}
+@media (max-width: 768px) {
+  .audio-ui-container {
+    padding: 1rem;
+  }
+
+  .music-player {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .swiper {
+    padding-bottom: 60px;
+  }
+
+  .controls {
+    gap: 1rem;
+  }
+
+  .hero-block {
+    align-items: center;
+  }
 }

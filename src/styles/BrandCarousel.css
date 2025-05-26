@@ -1,0 +1,42 @@
+.client-slider {
+  background: transparent;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top: solid 1px #fff; 
+  border-bottom: solid 1px #fff;
+}
+
+.client-slide-track {
+  display: flex;
+  gap: 4rem; /* Espacement entre logos */
+  align-items: center;
+ 
+   
+  box-sizing: border-box;
+}
+
+.client-slide {
+  width: 160px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .client-slide-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .client-slide {
+    width: 120px;
+    height: auto;
+  }
+}

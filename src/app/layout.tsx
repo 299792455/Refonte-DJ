@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         <Navbar />
-        <div className="pt-14"> {/* padding top pour pas que le contenu passe sous la navbar fixe */}
+        <div> {/* padding top pour pas que le contenu passe sous la navbar fixe */}
           {children}
         </div>
         <Footer />

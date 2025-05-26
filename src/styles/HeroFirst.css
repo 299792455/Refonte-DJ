@@ -1,0 +1,74 @@
+.hero-wrapper {
+  height: 100svh;
+  position: relative;
+  background: black;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 60;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 2.5rem;
+}
+
+.title {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: white;
+  overflow: hidden;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: white;
+  font-size: clamp(0.75rem, 2vw, 1.75rem);
+  overflow: hidden;
+}
+
+.fade-in,
+.fade-in-subtitle {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.explore-btn {
+  position: absolute;
+  bottom: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 60;
+}
+
+.arrow-svg {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}

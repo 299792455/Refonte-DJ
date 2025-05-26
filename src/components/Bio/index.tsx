@@ -32,14 +32,12 @@ export default function Bio() {
 
         <div className="info-section">
           <p className="paragraph">
-                Los sueños se ven lejanos, pero cada beat que creo es un paso más cerca de hacerlos sonar en todo el mundo.
+                Los sueños se ven lejanos, pero cada beat que creo es un paso más cerca de hacerlos sonar a todo el mundo.
               </p>
           
           
         </div>
-        <button className="btn btn-darken btn-inline">
-                My Beats<i className="bx bx-right-arrow-alt"></i>
-              </button>
+        <button className="spotify-btn">Listen Now</button>
       </div>
 
       <div className="image-zone">

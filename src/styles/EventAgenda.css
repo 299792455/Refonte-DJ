@@ -1,38 +1,81 @@
-.agenda-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  
-  color: #fff;
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
+* {
+  box-sizing: border-box;
 }
 
-.agenda-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
+.agenda-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 3rem auto;
+  font-family: 'Gaegu', sans-serif;
+}
+
+.agenda-title {
+  text-align: center;
+  padding: 20px;
+  color: #45B39D;
+  font-size: 2.5rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.row {
+  width: 90%;
+  padding: 10px;
+  overflow: auto;
+  border-bottom: 1px solid #ccc;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
-.agenda-item {
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 1rem;
-  background: #1a1a1a;
-}
-
-.agenda-date {
+.date {
   font-weight: bold;
-  color: #ff00c7;
-  display: block;
-  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-.agenda-name {
-  font-size: 1.2rem;
+.city {
+  font-weight: bold;
+  flex: 1;
 }
 
-.agenda-place {
-  font-size: 0.9rem;
-  opacity: 0.7;
+.venue {
+  flex: 2;
+  color: #555;
 }
+
+.ticket {
+  font-weight: bold;
+  color: #000;
+  border: 3px solid #1DB954;
+  background-color: #1DB954;
+  border-radius: 10px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ticket:hover {
+  background-color: #1ED760;
+  border-color: #1ED760;
+  border-radius: 15px;
+}
+
+
+.agenda-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  gap: 0.7rem;
+  text-transform: uppercase;
+  text-align: right;
+}
+

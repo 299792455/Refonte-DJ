@@ -11,6 +11,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@ionic/react": "^8.5.7",
+    "@react-three/drei": "^10.0.8",
+    "@react-three/fiber": "^9.1.2",
     "ionicons": "^8.0.8",
     "mongoose": "^8.14.1",
     "next": "15.3.2",
@@ -18,7 +20,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-h5-audio-player": "^3.10.0-rc.1",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "three": "^0.159.0",
+    "three-stdlib": "^2.36.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

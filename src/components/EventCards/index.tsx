@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import '../../styles/EventCards.css';
+import '@/styles/EventAgenda.css';
 
 type Event = {
   _id: string;
@@ -10,7 +10,7 @@ type Event = {
   date: string;
 };
 
-export default function EventCards() {
+export default function EventAgenda() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
@@ -19,21 +19,29 @@ export default function EventCards() {
       const data = await res.json();
       setEvents(data);
     };
+
     fetchEvents();
   }, []);
 
+  const formatDate = (dateStr: string) => {
+    const dateObj = new Date(dateStr);
+    const options: Intl.DateTimeFormatOptions = { month: 'short', day: '2-digit' };
+    return dateObj.toLocaleDateString('en-US', options);
+  };
+
   return (
-    <div className="container">
-      {events.map((event, index) => (
-        <div className="box" key={event._id}>
-          <span></span>
-          <div className="content">
-            <h2>{new Date(event.date).toLocaleDateString('fr-FR')}</h2>
-            <p>{event.name}<br />@ {event.place}</p>
-            <a href="#">Voir plus</a>
+    <section className="agenda-wrapper">
+      <h1 className="agenda-title">FECHAS</h1>
+      <div className="content">
+        {events.map((event) => (
+          <div className="row" key={event._id}>
+            <div className="date">{formatDate(event.date)}</div>
+            <div className="city">{event.place}</div>
+            <div className="venue">{event.name}</div>
+            <div className="ticket">Website</div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }

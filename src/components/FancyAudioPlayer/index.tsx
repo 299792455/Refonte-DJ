@@ -87,6 +87,12 @@ export default function FancyAudioPlayer() {
 
   return (
     <div className="audio-ui-container">
+      <div className="hero-block">
+  <div className="hero-line"><span>M</span><span>Y</span></div>
+  <div className="hero-line"><span>B</span><span>E</span><span>A</span><span>T</span><span>S</span></div>
+</div>
+
+    
       <div className="album-cover">
         <Swiper
           modules={[EffectCoverflow]}
