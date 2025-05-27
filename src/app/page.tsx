@@ -10,6 +10,7 @@ import EventCards from '@/components/EventCards';
 import Bio from '@/components/Bio';
 import BrandCarousel from '@/components/BrandCarousel';
 //import BrandCarousel from '@/components/BrandCarousel';
+import MediaGallery from '@/components/MediaGallery'; 
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       <BrandCarousel />
       <FancyAudioPlayer />
        <EventCards /> 
-         
+       <MediaGallery  />  
     </main>
   );
 }

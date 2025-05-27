@@ -76,6 +76,6 @@
   animation: fadeIn 1s ease-in forwards;
   gap: 0.7rem;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
 }
 

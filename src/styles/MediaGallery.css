@@ -1,0 +1,88 @@
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vmin;
+  overflow: hidden;
+  transform: skew(5deg);
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card {
+  flex: 1;
+  transition: all 1s ease-in-out;
+  height: 50vmin;
+  position: relative;
+  min-width: 200px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__head {
+  color: black;
+  background: #1DB954 !important;
+  padding: 0.5em;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.card:hover {
+  flex-grow: 10;
+}
+
+.card:hover img,
+.card:hover .video-embed {
+  filter: grayscale(0);
+}
+
+.card:hover .card__head {
+  text-align: center;
+  top: calc(100% - 2em);
+  color: rgb(0, 0, 0);
+  background: #7a38b7 !important;
+  font-size: 1.5em;
+  transform: rotate(0deg) skew(-5deg);
+}
+
+.card img,
+.card .video-embed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  filter: grayscale(100%);
+  border: none;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.media-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  gap: 0.7rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.media-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
