@@ -6,6 +6,8 @@
   max-width: 768px;
   margin: 60px auto;
   position: relative;
+ background: var(--background);
+  color: var(--foreground);
   
 }
 
@@ -14,8 +16,10 @@ form {
   margin: 50px 0;
 }
 
+
+
 .Form-Title {
-  color: #474544;
+  color: #ffffff;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 7px;
@@ -48,7 +52,7 @@ textarea {
   background: none;
   border: none;
   border-bottom: solid 2px #474544;
-  color: #474544;
+  color: #ffffff;
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 1px;
@@ -74,7 +78,7 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  color: #474544;
+  color: #ffffff;
 }
 
 :-moz-placeholder {
@@ -83,18 +87,18 @@ textarea {
 }
 
 ::-moz-placeholder {
-  color: #474544;
+  color: #ffffff;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #474544;
+  color: #ffffff;
 }
 
 #form_button {
   background: none;
   border: solid 2px #474544;
-  color: #474544;
+  color: #ffffff;
   cursor: pointer;
   font-size: 0.875em;
   font-weight: bold;

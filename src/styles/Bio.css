@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@900&display=swap");
 
+
 .bio-wrapper {
   display: flex;
   flex-direction: row;
   max-width: 1440px;
-  height: 60vh;
   margin: auto;
   align-items: center;
   justify-content: center;
+}
+
+.paragraph {
+  font-size: 1.58rem;
+  line-height: 1.8rem;
+  color: #969696;
+  animation: fadeInUp 1.5s 2.4s ease forwards;
+  opacity: 0;
 }
 
 .text-zone {
@@ -99,6 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .bio-image {
@@ -119,9 +128,9 @@
 }
 
 .bio-modal {
-  background: white;
+  background: #0d0d0d;
   padding: 2rem;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   border-radius: 0.5rem;
   position: relative;

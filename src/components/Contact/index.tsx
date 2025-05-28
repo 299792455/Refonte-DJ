@@ -22,7 +22,7 @@ export default function ContactForm() {
 
   return (
     <div id="container">
-      <h1 className='Form-Title'>&bull; Keep in Touch &bull;</h1>
+      <h1 className='Form-Title'>&bull; Contacto &bull;</h1>
       <div className="underline"></div>
       <div className="icon_wrapper">
         <svg className="icon" viewBox="0 0 145.192 145.192">
@@ -33,12 +33,12 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} id="contact_form">
         
         <div className="email">
-          <input type="email" placeholder="My e-mail is" name="email" value={formData.email} onChange={handleChange} required />
+          <input type="email" placeholder="Tu email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div className="message">
           <textarea
             name="message"
-            placeholder="I'd like to chat about"
+            placeholder="Quiero hablar de..."
             id="message_input"
             cols={30}
             rows={5}
@@ -48,9 +48,9 @@ export default function ContactForm() {
           ></textarea>
         </div>
         <div className="submit">
-          <input type="submit" value="Send Message" id="form_button" />
+          <input type="submit" value="Enviar" id="form_button" />
         </div>
-        {submitted && <p style={{ textAlign: 'center', marginTop: '20px', color: '#474544' }}>Message sent ✔</p>}
+        {submitted && <p style={{ textAlign: 'center', marginTop: '20px', color: '#474544' }}>Enviado ✔</p>}
       </form>
     </div>
   );

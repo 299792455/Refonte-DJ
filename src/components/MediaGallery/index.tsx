@@ -28,7 +28,7 @@ const mediaItems = [
 export default function MediaGallery() {
   return (
     <div className="media-wrapper">
-      <h1 className="media-title">Medias</h1>
+      
       <div className="media-container">
         {mediaItems.map((item, index) => (
           <div className="card" key={index}>

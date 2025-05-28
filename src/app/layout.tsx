@@ -1,6 +1,13 @@
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-montserrat',
+});
 
 export const metadata = {
   title: 'DJ Sergio Telmo',
@@ -9,12 +16,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={montserrat.variable}>
       <body>
         <Navbar />
-        <div> {/* padding top pour pas que le contenu passe sous la navbar fixe */}
-          {children}
-        </div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

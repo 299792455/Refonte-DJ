@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { FaInstagram } from 'react-icons/fa';
 import '../../styles/Navbar.css';
 import ContactForm from '../Contact/index';
 
@@ -41,7 +42,7 @@ export default function Navbar() {
               <li className="menu-item"><a href="#" className="menu-link">Inicio</a></li>
               <li className="menu-item"><a href="#" className="menu-link">My Beats</a></li>
               <li className="menu-item"><a href="#" className="menu-link">Eventos</a></li>
-              <li className="menu-item">
+              <li className="menu-item contact-cta">
                 <a
                   href="#"
                   className="menu-link"
@@ -51,6 +52,15 @@ export default function Navbar() {
                   }}
                 >
                   Contacto
+                </a>
+                <a
+                  href="https://www.instagram.com/ton_instagram" // ← remplace ici
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="insta-icon"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
                 </a>
               </li>
             </ul>

@@ -1,34 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
 :root {
+  --background: #0d0d0d;
+  --foreground: #ffffff;
   --navbar-height: 70px;
   --transition-speed: 0.3s;
 }
 
 .navbar {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: none !important;
   height: var(--navbar-height);
   background: rgba(0, 0, 0, 0);
-  
+   font-family: 'Montserrat', sans-serif !important;
   z-index: 1000;
   transition: top var(--transition-speed) ease;
 }
+
+.bio-modal {
+  background:#0d0d0d;
+}
+
 
 .navbar--hidden {
   top: -100px;
 }
 
 .container {
-   
-  margin: 0 auto;
-  
+  margin: 0;
+  padding: 0 2rem;
+  width: 100vw;
+  max-width: 100vw !important; /* override les éventuels styles globaux */
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
-
 .brand {
   color: white;
   font-size: 1.5rem;
@@ -52,7 +64,7 @@
 .menu-link {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
   transition: color 0.2s ease;
 }
 
@@ -109,4 +121,20 @@
     right: 2rem;
     transform: translateY(-50%);
   }
+}
+
+.contact-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.insta-icon {
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.insta-icon:hover {
+  color: #e1306c; /* rose Insta */
 }

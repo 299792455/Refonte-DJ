@@ -1,33 +1,36 @@
 'use client';
 import '@/styles/Bio.css';
+import BrandCarousel from '../BrandCarousel';
 
 export default function Bio() {
   
 
   return (
+    <>
+    <div className='bio-general'>
     <div className="bio-wrapper">
       <div className="text-zone">
         <div className="hero-section">
-  <div className="hero-line">
-    <span>D</span>
-    <span>J</span>
-  </div>
-  <div className="hero-line">
-    <span>S</span>
-    <span>E</span>
-    <span>R</span>
-    <span>G</span>
-    <span>I</span>
-    <span>O</span>
-  </div>
-  <div className="hero-line">
-    <span>T</span>
-    <span>E</span>
-    <span>L</span>
-    <span>M</span>
-    <span>O</span>
-  </div>
-</div>
+            <div className="hero-line">
+              <span>D</span>
+              <span>J</span>
+            </div>
+            <div className="hero-line">
+              <span>S</span>
+              <span>E</span>
+              <span>R</span>
+              <span>G</span>
+              <span>I</span>
+              <span>O</span>
+            </div>
+            <div className="hero-line">
+              <span>T</span>
+              <span>E</span>
+              <span>L</span>
+              <span>M</span>
+              <span>O</span>
+            </div>
+          </div>
 
 
         <div className="info-section">
@@ -47,8 +50,9 @@ export default function Bio() {
           className="bio-image"
         />
       </div>
-
-      
     </div>
+    <BrandCarousel />
+    </div>
+    </>
   );
 }
