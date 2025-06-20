@@ -21,7 +21,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="container">
+    <div className="contact-container">
       <h1 className='Form-Title'>&bull; Contacto &bull;</h1>
       <div className="underline"></div>
       <div className="icon_wrapper">

@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 
-#container {
+
+.contact-container {
   border: solid 3px #474544;
   max-width: 768px;
-  margin: 60px auto;
-  position: relative;
- background: var(--background);
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--background);
   color: var(--foreground);
-  
+  box-sizing: border-box;
 }
 
 form {

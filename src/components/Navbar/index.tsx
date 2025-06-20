@@ -21,23 +21,29 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('lock-scroll', isMenuOpen);
+  }, [isMenuOpen]);
+
   return (
     <>
       <nav className={`navbar ${hidden ? 'navbar--hidden' : ''}`}>
         <div className="container">
-          <a href="#" className="brand">DJ Sergio Telmo</a>
+          <a href="#" className="brand">DJ</a>
 
+          {/* Burger button */}
+       <div
+  className={`burger ${isMenuOpen ? 'open' : ''}`}
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+>
+  <span className="burger-line"></span>
+  <span className="burger-line"></span>
+  <span className="burger-line"></span>
+</div>
+
+
+          {/* Menu */}
           <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
-            <div
-              className="burger"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle Menu"
-            >
-              <span className="burger-line"></span>
-              <span className="burger-line"></span>
-              <span className="burger-line"></span>
-            </div>
-
             <ul className="menu-inner">
               <li className="menu-item"><a href="#" className="menu-link">Inicio</a></li>
               <li className="menu-item"><a href="#" className="menu-link">My Beats</a></li>
@@ -54,7 +60,7 @@ export default function Navbar() {
                   Contacto
                 </a>
                 <a
-                  href="https://www.instagram.com/ton_instagram" // ← remplace ici
+                  href="https://www.instagram.com/ton_instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="insta-icon"

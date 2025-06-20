@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main>
         <Bio />
-        
+       
         <FancyAudioPlayer />
         <EventCards /> 
         <MediaGallery  />  

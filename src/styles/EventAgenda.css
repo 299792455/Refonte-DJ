@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
 
 * {
   box-sizing: border-box;
@@ -68,7 +68,7 @@
 
 
 .agenda-title {
-  font-family: 'Montserrat', sans-serif;
+
   font-size: 3.5rem;
   font-weight: 900;
   color: white;

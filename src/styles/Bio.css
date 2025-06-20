@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@900&display=swap");
 
+
+.bio-general {
+ display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
 
 .bio-wrapper {
   display: flex;
@@ -8,6 +14,8 @@
   margin: auto;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0;
+ 
 }
 
 .paragraph {
@@ -39,12 +47,13 @@
 }
 
 .hero-line span {
-  font-family: 'Montserrat', sans-serif;
+ 
   font-size: 3.5rem;
   font-weight: 900;
   color: white;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+  letter-spacing: -0.5rem;
 }
 
 .hero-line:nth-child(1) span:nth-child(1) { animation-delay: 0.2s; }
@@ -178,4 +187,80 @@
 
 .spotify-btn:hover {
   background-color: #1ed760;
+}
+
+@media (max-width: 1024px) {
+  .text-zone {
+    padding: 2rem;
+  }
+
+  .hero-line span {
+    font-size: 2.8rem;
+    letter-spacing: -0.3rem;
+  }
+
+  .paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bio-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .text-zone,
+  .image-zone {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-line {
+    justify-content: center;
+  }
+
+  .hero-line span {
+    font-size: 2.5rem;
+    letter-spacing: -0.2rem;
+  }
+
+  .spotify-btn {
+    align-self: center;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero-line span {
+    font-size: 2rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    padding: 0 0.5rem;
+  }
+
+  .spotify-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .bio-wrapper {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .image-zone {
+  display: none;
+}
 }

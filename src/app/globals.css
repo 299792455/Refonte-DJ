@@ -1,5 +1,6 @@
 
-@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -33,6 +34,19 @@ main {
   font-family: 'Montserrat', sans-serif;
   padding: 2rem 1rem;
 }
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.paragraph {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 @keyframes moveRandom1 {
   0% { transform: translate(0, 0) scale(1); }
