@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+.row {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+
+
 .agenda-wrapper {
   width: 100%;
   max-width: 1440px;
@@ -11,28 +25,12 @@
   font-family: 'Gaegu', sans-serif;
 }
 
-.agenda-title {
-  text-align: center;
-  padding: 20px;
-  color: #45B39D;
-  font-size: 2.5rem;
-}
+
 
 .content {
   width: 100%;
 }
 
-.row {
-  width: 90%;
-  padding: 10px;
-  overflow: auto;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
 
 .date {
   font-weight: bold;
@@ -68,7 +66,6 @@
 
 
 .agenda-title {
-
   font-size: 3.5rem;
   font-weight: 900;
   color: white;
@@ -76,6 +73,38 @@
   animation: fadeIn 1s ease-in forwards;
   gap: 0.7rem;
   text-transform: uppercase;
-  text-align: left;
+ padding :3rem !important;
 }
 
+@media (max-width: 768px) {
+  .agenda-wrapper {
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+
+  .agenda-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .date,
+  .city,
+  .venue,
+  .ticket {
+    width: 100%;
+  }
+
+  .ticket {
+    align-self: center;
+    text-align: center;
+    width: fit-content;
+  }
+}
