@@ -189,6 +189,10 @@
   background-color: #1ed760;
 }
 
+.bio-bg-video {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .text-zone {
     padding: 2rem;
@@ -203,14 +207,17 @@
   .paragraph {
     font-size: 1.2rem;
   }
+  
 }
 
 @media (max-width: 768px) {
   .bio-wrapper {
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 1rem;
+    padding: 0;
+    height: 90vh ;
   }
+  
 
   .text-zone,
   .image-zone {
@@ -238,6 +245,30 @@
     font-size: 1rem;
     line-height: 1.6rem;
   }
+  .image-zone {
+  display: none;
+}
+ .bio-bg-video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .bio-general {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+.text-zone {
+  position: relative;
+  z-index: 1;
+}
 }
 
 

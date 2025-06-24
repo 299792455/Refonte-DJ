@@ -12,14 +12,24 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Message:', formData);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setFormData({ name: '', email: '', message: '' });
-  };
-
+  } catch (error) {
+    console.error('Erreur:', error);
+  }
+};
   return (
     <div className="contact-container">
       <h1 className='Form-Title'>&bull; Contacto &bull;</h1>

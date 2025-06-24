@@ -9,6 +9,16 @@ export default function Bio() {
     <>
     
     <div className='bio-general'>
+      <video
+  className="bio-bg-video"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source src="/Hero-DjTelmo-Mobile.mp4" type="video/mp4" />
+</video>
+
       <div className="bio-wrapper">
         <div className="text-zone">
           <div className="hero-section">
@@ -36,7 +46,7 @@ export default function Bio() {
 
           <div className="info-section">
             <p className="paragraph">
-                  Los sueños se ven lejanos, pero cada beat que creo es un paso más cerca de hacerlos sonar a todo el mundo.
+                  Cada beat que creo es un paso más cerca de hacerlos sonar a todo el mundo.
                 </p>
             
             

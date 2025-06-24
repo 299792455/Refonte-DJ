@@ -22,8 +22,8 @@
 }
 
 .card {
-  flex: 1 1 calc(25% - 1em); /* 4 par ligne avec gap */
-  max-width: calc(25% - 1em);
+  flex: 1 1 calc(33% - 1em); /* 3 par ligne avec gap */
+  max-width: calc(33% - 1em);
   transition: all 1s ease-in-out;
   height: 50vmin;
   position: relative;

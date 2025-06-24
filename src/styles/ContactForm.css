@@ -2,7 +2,7 @@
 
 
 .contact-container {
-  border: solid 3px #474544;
+  border: solid 3px #1ed760;
   max-width: 768px;
   margin: 0 auto;
   padding: 2rem;
@@ -96,13 +96,13 @@ textarea {
 }
 
 #form_button {
-  background: none;
-  border: solid 2px #474544;
-  color: #ffffff;
+  background: #1ed760;
+  border-radius: 30px;
+  color: #000000;
   cursor: pointer;
   font-size: 0.875em;
   font-weight: bold;
-  padding: 20px 35px;
+ padding: 12px 30px;
   text-transform: uppercase;
   transition: all 0.3s;
 }

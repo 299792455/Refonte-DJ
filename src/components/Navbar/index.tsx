@@ -29,7 +29,9 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${hidden ? 'navbar--hidden' : ''}`}>
         <div className="container">
-          <a href="#" className="brand">DJ</a>
+          <a href="#" className="brand">
+   <img src="/logo-DjTelmo.png" alt="Logo DJ" className="h-10 w-auto" />
+</a>
 
           {/* Burger button */}
        <div

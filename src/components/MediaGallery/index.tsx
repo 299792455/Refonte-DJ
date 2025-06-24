@@ -5,12 +5,18 @@ import '../../styles/MediaGallery.css';
 const mediaItems = [
    {
     type: 'image',
-    src: 'https://i.postimg.cc/tRdmnd5r/E4-A2167sax.jpg',
-  },
-  {
-    type: 'image',
     src: 'https://i.postimg.cc/mZMWXFSM/Jordan-Bouzada-3.jpg',
   },
+   {
+    type: 'image',
+    src: 'https://i.postimg.cc/WpkbRFyX/Dj-Telmo-Gallery3.jpg',
+  },
+  
+   {
+    type: 'image',
+    src: 'https://i.postimg.cc/tRdmnd5r/E4-A2167sax.jpg',
+  },
+ 
   {
     type: 'image',
     src: 'https://i.postimg.cc/SsM3vwcq/Jordan-Bouzada-14.jpg',
@@ -22,18 +28,6 @@ const mediaItems = [
   {
     type: 'image',
     src: 'https://i.postimg.cc/wMvvJ02z/TFP1644.jpg',
-  },
-  {
-    type: 'image',
-    src: 'https://i.postimg.cc/WpkbRFyX/Dj-Telmo-Gallery3.jpg',
-  },
-  {
-    type: 'image',
-    src: 'https://i.postimg.cc/6QqvJrFy/Dj-Telmo-Gallery4.jpg',
-  },
-  {
-    type: 'image',
-    src: 'https://i.postimg.cc/XYP26sjv/TFP1683.jpg',
   },
 ];
 
