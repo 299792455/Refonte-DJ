@@ -3,14 +3,27 @@
   justify-content: center;
   align-items: center;
   margin: 10vmin;
+  margin-top: 0;
   overflow: hidden;
   transform: skew(5deg);
   flex-wrap: wrap;
   gap: 1em;
 }
 
+.media-title {font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  gap: 0.7rem;
+  text-transform: uppercase;
+
+  
+}
+
 .card {
-  flex: 1;
+  flex: 1 1 calc(25% - 1em); /* 4 par ligne avec gap */
+  max-width: calc(25% - 1em);
   transition: all 1s ease-in-out;
   height: 50vmin;
   position: relative;
@@ -69,22 +82,12 @@
   transform: scale(1.1);
 }
 
-.media-title {
- 
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: white;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  gap: 0.7rem;
-  text-transform: uppercase;
-  text-align: left;
-}
+
 
 .media-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
+ 
 }
 
 @media (max-width: 768px) {
@@ -93,6 +96,10 @@
     align-items: center;
     transform: none;
     margin: 2rem 0;
+  }
+
+   .media-title {
+    text-align: center;
   }
 
   .card {

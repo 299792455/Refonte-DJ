@@ -149,6 +149,7 @@ export default function FancyAudioPlayer() {
             <button className="forward" onClick={nextTrack}>
               <i className="fa-solid fa-forward"></i>
             </button>
+            
           </div>
         </div>
       )}

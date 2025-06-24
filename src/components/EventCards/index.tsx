@@ -38,7 +38,7 @@ export default function EventAgenda() {
             <div className="date">{formatDate(event.date)}</div>
             <div className="city">{event.place}</div>
             <div className="venue">{event.name}</div>
-            <div className="ticket">Website</div>
+            <div className="ticket">Sitio Web</div>
           </div>
         ))}
       </div>
