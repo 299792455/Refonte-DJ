@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* spacing entre toutes les slides */
+  gap: 30px; 
 }
 
 .event-carousel .swiper-slide {

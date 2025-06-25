@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-// Remplace ces URLs par tes vraies images PostImage
+
 const logos = [
   'https://i.postimg.cc/zG6sjMQK/logo-tecnics-Modifi.png',
   'https://i.postimg.cc/rsHjT6x9/Logo-Dj-Telmo.png',
@@ -23,7 +23,7 @@ export default function CarouselBrand() {
     const track = trackRef.current;
     if (!track) return;
 
-    const fullLogos = [...logos, ...logos]; // Double pour effet infini
+    const fullLogos = [...logos, ...logos]; 
     track.innerHTML = '';
 
     fullLogos.forEach((src) => {

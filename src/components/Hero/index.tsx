@@ -6,7 +6,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-white bg-black text-center"
     >
-      {/* Cercles lumineux comme avant */}
+   
       <div className="absolute rounded-full opacity-70 mix-blend-screen pointer-events-none blur-[40px] animate-moveRandom1 w-[400px] h-[400px] bg-fuchsia-500"></div>
       <div className="absolute rounded-full opacity-70 mix-blend-screen pointer-events-none blur-[40px] animate-moveRandom2 w-[500px] h-[500px] bg-cyan-300"></div>
 

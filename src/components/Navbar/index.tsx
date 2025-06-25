@@ -14,7 +14,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // S'il y a du scroll dans n'importe quel sens, on montre la navbar
+      // Scroll dans n'importe quel sens, on montre la navbar
       if (currentScrollY !== lastScrollY) {
         setShowNavbar(true);
       }

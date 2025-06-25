@@ -6,6 +6,7 @@ import { EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import '../../styles/FancyAudioPlayer.css';
+import type { Swiper as SwiperType } from 'swiper';
 
 export type Track = {
   _id: string;
@@ -25,7 +26,7 @@ export default function FancyAudioPlayer() {
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLInputElement>(null);
-  const swiperRef = useRef<any>(null);
+ const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     const fetchTracks = async () => {
@@ -109,11 +110,11 @@ export default function FancyAudioPlayer() {
           {tracks.map((track) => (
             <SwiperSlide key={track._id} className="swiper-slide">
               <img src={track.coverImage} alt={track.title} />
-              <div className="overlay">
-                <a href="#" target="_blank">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </div>
+              {/* <div className="overlay">
+  <a href="#" target="_blank">
+    <ion-icon name="logo-youtube"></ion-icon>
+  </a>
+</div> */}
             </SwiperSlide>
           ))}
         </Swiper>

@@ -42,7 +42,7 @@
 }
 
 .hero-section .hero-line:nth-child(2) {
-  margin-bottom: -2rem; /* rapproche SERGIO de TELMO */
+  margin-bottom: -2rem; 
 }
 
 .hero-line {
@@ -156,7 +156,7 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
-  align-self: flex-start; /* pour l'aligner à gauche dans la zone de texte */
+  align-self: flex-start; 
 }
 
 .spotify-btn:hover {

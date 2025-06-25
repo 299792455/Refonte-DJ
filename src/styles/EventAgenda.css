@@ -50,7 +50,7 @@
 
 .ticket {
   display: inline-block;
-  padding: 0.50rem 1.5rem; /* py-3 px-6 */
+  padding: 0.50rem 1.5rem; 
   border: 1px solid #1ed760;
   border-radius: 0.5rem;   /* rounded-lg */
   color: #1ed760;

@@ -6,8 +6,8 @@
 }
 
 .navbar {
-  position: fixed; /* ← c'est ça qui la garde visible */
-  top: -100px;      /* ← cachée de base */
+  position: fixed; 
+  top: -100px;      
   left: 0;
   width: 100vw;
   height: var(--navbar-height);

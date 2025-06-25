@@ -23,7 +23,7 @@ export async function GET() {
 
     const rawTracks = await Track.find().lean();
 
-    // Transforme les noms en URLs complètes ici
+   
     const formatted = rawTracks.map(track => ({
       ...track,
       musicFile: `${BASE_AUDIO_URL}${track.musicFile}`,
@@ -31,8 +31,8 @@ export async function GET() {
     }));
 
     return NextResponse.json(formatted, { status: 200 });
-  } catch (error: any) {
-    console.error('Erreur API /api/tracks :', error);
+  } catch (error) {
+  console.error('Erreur API /api/tracks :', error instanceof Error ? error.message : error);
     return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 });
   }
 }

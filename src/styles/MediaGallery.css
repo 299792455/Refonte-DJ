@@ -22,7 +22,7 @@
 }
 
 .card {
-  flex: 1 1 calc(33% - 1em); /* 3 par ligne avec gap */
+  flex: 1 1 calc(33% - 1em); 
   max-width: calc(33% - 1em);
   transition: all 1s ease-in-out;
   height: 50vmin;

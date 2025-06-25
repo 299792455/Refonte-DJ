@@ -9,15 +9,18 @@ export default function Bio() {
     <>
     
     <div className='bio-general'>
-      <video
-        className="bio-bg-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/Hero-DjTelmo-Mobile.mp4" type="video/mp4" />
-      </video>
+     <video
+  className="bio-bg-video"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source
+    src="https://pub-9a7182cda85143a0844e0142152196a3.r2.dev/Hero-DjTelmo-Mobile.mp4"
+    type="video/mp4"
+  />
+</video>
 
       <div className="bio-wrapper">
         <div className="text-zone">

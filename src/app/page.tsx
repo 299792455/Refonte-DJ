@@ -1,4 +1,4 @@
-import Hero from '@/components/HeroTest';
+//import Hero from '@/components/HeroTest';
 //import AudioPlayerComponent from '@/components/AudioPlayer';  
 import FancyAudioPlayer from '@/components/FancyAudioPlayer';
 //import Agenda from '@/components/Agenda';

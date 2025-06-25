@@ -8,7 +8,7 @@ export const metadata = {
 export default function AvisoLegalPage() {
   return (
     <section className="relative bg-black text-white min-h-screen w-full overflow-hidden px-6 py-48">
-      {/* Background visuel (optionnel : image ou lignes SVG) */}
+     
       <img
         src="/medias/HeroBgL.png"
         alt=""
@@ -83,7 +83,7 @@ export default function AvisoLegalPage() {
           </section>
         </div>
 
-        {/* Lien retour */}
+        
         <div className="relative group flex justify-center mt-12">
  
 <Link
