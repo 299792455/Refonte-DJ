@@ -3,20 +3,25 @@
 import { useEffect, useState } from 'react';
 import { FaInstagram } from 'react-icons/fa';
 import '../../styles/Navbar.css';
-import ContactForm from '../Contact/index';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
 
   useEffect(() => {
-    let lastScroll = window.scrollY;
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setHidden(currentScroll > lastScroll);
-      lastScroll = currentScroll;
+      const currentScrollY = window.scrollY;
+
+      // S'il y a du scroll dans n'importe quel sens, on montre la navbar
+      if (currentScrollY !== lastScrollY) {
+        setShowNavbar(true);
+      }
+
+      lastScrollY = currentScrollY;
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -26,64 +31,54 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <>
-      <nav className={`navbar ${hidden ? 'navbar--hidden' : ''}`}>
-        <div className="container">
-          <a href="#" className="brand">
-   <img src="/logo-DjTelmo.png" alt="Logo DJ" className="h-10 w-auto" />
-</a>
+    <nav className={`navbar ${showNavbar ? 'visible' : ''}`}>
+      <div className="container">
+        <a href="#" className="brand">
+          <img src="/logo-DjTelmo.png" alt="Logo DJ" className="h-8 w-auto" />
+        </a>
 
-          {/* Burger button */}
-       <div
-  className={`burger ${isMenuOpen ? 'open' : ''}`}
-  onClick={() => setIsMenuOpen(!isMenuOpen)}
->
-  <span className="burger-line"></span>
-  <span className="burger-line"></span>
-  <span className="burger-line"></span>
-</div>
-
-
-          {/* Menu */}
-          <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
-            <ul className="menu-inner">
-              <li className="menu-item"><a href="#" className="menu-link">Inicio</a></li>
-              <li className="menu-item"><a href="#" className="menu-link">My Beats</a></li>
-              <li className="menu-item"><a href="#" className="menu-link">Eventos</a></li>
-              <li className="menu-item contact-cta">
-                <a
-                  href="#"
-                  className="menu-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowModal(true);
-                  }}
-                >
-                  Contacto
-                </a>
-              </li>
-              <a
-                  href="https://www.instagram.com/ton_instagram"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="insta-icon"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-            </ul>
-          </div>
+        <div
+          className={`burger ${isMenuOpen ? 'open' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span className="burger-line"></span>
+          <span className="burger-line"></span>
+          <span className="burger-line"></span>
         </div>
-      </nav>
 
-      {showModal && (
-        <div className="bio-modal-overlay" onClick={() => setShowModal(false)}>
-          <div className="bio-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="bio-modal-close" onClick={() => setShowModal(false)}>✕</button>
-            <ContactForm />
-          </div>
+        <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
+          <ul
+            className="menu-inner"
+            onClick={(e) => {
+              const target = e.target as HTMLElement;
+              if (target.tagName === 'A') setIsMenuOpen(false);
+            }}
+          >
+            <li className="menu-item">
+              <a href="#bio" className="menu-link">Inicio</a>
+            </li>
+            <li className="menu-item">
+              <a href="#beats" className="menu-link">My Beats</a>
+            </li>
+            <li className="menu-item">
+              <a href="#eventos" className="menu-link">Eventos</a>
+            </li>
+            <li className="menu-item contact-cta">
+              <a href="#contact" className="menu-link">Contacto</a>
+            </li>
+            <a
+              href="https://www.instagram.com/sergiotelmo_?igsh=Z201bWx6ZTdncXgz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="insta-icon"
+              aria-label="Instagram"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FaInstagram />
+            </a>
+          </ul>
         </div>
-      )}
-    </>
+      </div>
+    </nav>
   );
 }

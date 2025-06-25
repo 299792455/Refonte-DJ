@@ -32,13 +32,8 @@ export default function ContactForm() {
 };
   return (
     <div className="contact-container">
-      <h1 className='Form-Title'>&bull; Contacto &bull;</h1>
-      <div className="underline"></div>
-      <div className="icon_wrapper">
-        <svg className="icon" viewBox="0 0 145.192 145.192">
-          <path d="M126.82,32.694c-2.804...Z"></path>
-        </svg>
-      </div>
+      <h1 className='agenda-title'>Contacto </h1>
+    
 
       <form onSubmit={handleSubmit} id="contact_form">
         
@@ -48,7 +43,7 @@ export default function ContactForm() {
         <div className="message">
           <textarea
             name="message"
-            placeholder="Quiero hablar de..."
+            placeholder="Quieres hablar de..."
             id="message_input"
             cols={30}
             rows={5}

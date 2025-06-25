@@ -10,14 +10,14 @@ export default function Bio() {
     
     <div className='bio-general'>
       <video
-  className="bio-bg-video"
-  autoPlay
-  muted
-  loop
-  playsInline
->
-  <source src="/Hero-DjTelmo-Mobile.mp4" type="video/mp4" />
-</video>
+        className="bio-bg-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/Hero-DjTelmo-Mobile.mp4" type="video/mp4" />
+      </video>
 
       <div className="bio-wrapper">
         <div className="text-zone">
@@ -62,10 +62,10 @@ export default function Bio() {
           />
         </div>
       </div>
-        
-      </div>
-     <CarouselBrand /> 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="carousel-brand-wrapper">
+      <CarouselBrand />
+      </div> 
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <svg
           className="w-6 h-6"
           style={{ color: "#fff" }}
@@ -81,6 +81,8 @@ export default function Bio() {
           />
         </svg>
       </div>
+      </div>
+     
     </>
   );
 }

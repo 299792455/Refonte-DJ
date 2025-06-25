@@ -6,21 +6,19 @@
 }
 
 .navbar {
-  position: relative;
-  top: 0;
+  position: fixed; /* ← c'est ça qui la garde visible */
+  top: -100px;      /* ← cachée de base */
   left: 0;
   width: 100vw;
-  max-width: none !important;
   height: var(--navbar-height);
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   transition: top var(--transition-speed) ease;
 }
 
-.navbar--hidden {
-  top: -100px;
+.navbar.visible {
+  top: 0;
 }
-
 .container {
   margin: 0;
   padding: 0 2rem;
@@ -121,7 +119,9 @@
   }
 
   .menu.open {
+    background-color: rgba(0, 0, 0, 0.9);
     height: calc(100vh - var(--navbar-height));
+    max-height: 30vh;
   }
 
   .menu-inner {
@@ -137,6 +137,7 @@
     right: 2rem;
     transform: translateY(-50%);
   }
+
 }
 
 .contact-cta {
@@ -179,4 +180,12 @@
 /* Lock scroll body */
 body.lock-scroll {
   overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .menu.open {
+    justify-content: center;
+    align-items: center;
+    max-height: 40vh;
+  }
 }

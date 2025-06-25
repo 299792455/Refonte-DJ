@@ -33,6 +33,7 @@ main {
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   padding: 2rem 1rem;
+  padding-top: 0;
 }
 
 h1 {
@@ -46,6 +47,7 @@ p {
 .paragraph {
   font-family: 'Roboto', sans-serif;
 }
+
 
 
 @keyframes moveRandom1 {
@@ -109,5 +111,16 @@ p {
   }
   20%, 21.999%, 63%, 63.999%, 71% {
     text-shadow: none;
+  }
+}
+
+.carousel-bottom {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .carousel-bottom {
+    display: block;
   }
 }
