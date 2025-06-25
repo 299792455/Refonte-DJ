@@ -1,11 +1,18 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-const items = [
-  'DISFRUTA DE TU OFERTA DE BIENVENIDA EN LA CONTRATACIÓN DE CADA PACK',
-  '***',
-  'DISFRUTA DE TU OFERTA DE BIENVENIDA EN LA CONTRATACIÓN DE CADA PACK',
-  '***',
+// Remplace ces URLs par tes vraies images PostImage
+const logos = [
+  'https://i.postimg.cc/zG6sjMQK/logo-tecnics-Modifi.png',
+  'https://i.postimg.cc/rsHjT6x9/Logo-Dj-Telmo.png',
+  'https://i.postimg.cc/sXD4ZfJc/akai-logo-Modifi.png',
+  'https://i.postimg.cc/BvJxdZR0/logo-pioneer-Modifi.png',
+  'https://i.postimg.cc/nzzqhRHS/Sennheiser-logo-new-Modifi.png',
+  'https://i.postimg.cc/zG6sjMQK/logo-tecnics-Modifi.png',
+  'https://i.postimg.cc/rsHjT6x9/Logo-Dj-Telmo.png',
+  'https://i.postimg.cc/sXD4ZfJc/akai-logo-Modifi.png',
+  'https://i.postimg.cc/BvJxdZR0/logo-pioneer-Modifi.png',
+  'https://i.postimg.cc/nzzqhRHS/Sennheiser-logo-new-Modifi.png',
 ];
 
 export default function CarouselBrand() {
@@ -16,19 +23,20 @@ export default function CarouselBrand() {
     const track = trackRef.current;
     if (!track) return;
 
-    const fullItems = [...items, ...items];
+    const fullLogos = [...logos, ...logos]; // Double pour effet infini
     track.innerHTML = '';
 
-    fullItems.forEach((item) => {
-      const div = document.createElement('div');
-      div.className =
-        'px-6 py-1 text-[1.5rem] xl:text-[2rem] text-white font-light whitespace-nowrap font-funnel';
-      div.textContent = item;
-      track.appendChild(div);
+    fullLogos.forEach((src) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className =
+        'h-[1rem] xl:h-[2rem] object-contain';
+      img.alt = 'Logo';
+      track.appendChild(img);
     });
 
     let position = 0;
-    const speed = 2;
+    const speed = 1;
 
     const animate = () => {
       position -= speed;
@@ -44,15 +52,15 @@ export default function CarouselBrand() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Masque si on descend un peu
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="left-0 w-full z-40 overflow-hidden">
-      <div ref={trackRef} className="flex whitespace-nowrap will-change-transform" />
+    <div className="left-0 w-full z-40 overflow-hidden border-t border-b border-[#1ed760] py-4 !py-4">
+      <div ref={trackRef} className="flex whitespace-nowrap will-change-transform gap-12" />
     </div>
   );
 }
