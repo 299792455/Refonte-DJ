@@ -61,7 +61,8 @@ export default function Navbar() {
                 >
                   Contacto
                 </a>
-                <a
+              </li>
+              <a
                   href="https://www.instagram.com/ton_instagram"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,7 +71,6 @@ export default function Navbar() {
                 >
                   <FaInstagram />
                 </a>
-              </li>
             </ul>
           </div>
         </div>

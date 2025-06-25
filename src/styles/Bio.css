@@ -41,6 +41,10 @@
   gap: 1rem;
 }
 
+.hero-section .hero-line:nth-child(2) {
+  margin-bottom: -2rem; /* rapproche SERGIO de TELMO */
+}
+
 .hero-line {
   display: flex;
   gap: 0.7rem;

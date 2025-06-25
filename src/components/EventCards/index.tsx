@@ -38,7 +38,14 @@ export default function EventAgenda() {
             <div className="date">{formatDate(event.date)}</div>
             <div className="city">{event.place}</div>
             <div className="venue">{event.name}</div>
-            <div className="ticket">Sitio Web</div>
+            <a
+  href="https://www.instagram.com/pubsky_/"
+  className="ticket"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Sitio Web
+</a>
           </div>
         ))}
       </div>

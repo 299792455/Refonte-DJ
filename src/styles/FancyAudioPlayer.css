@@ -128,7 +128,7 @@
   -webkit-appearance: none;
   width: 100%;
   height: 7px;
-  background: rgba(163, 162, 164, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 4px;
   margin: 32px 0 24px;
   cursor: pointer;
@@ -158,7 +158,7 @@
   width: 50px;
   aspect-ratio: 1/1;
   margin: 20px;
-  background: rgba(163, 162, 164, 0.3);
+  background: rgb(255, 255, 255);
   color: var(--primary-clr);
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -167,6 +167,23 @@
   box-shadow: 0 10px 20px rgba(5, 36, 28, 0.3);
   cursor: pointer;
   transition: all 0.3s linear;
+}
+
+.controls button.backward,
+.controls button.forward {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  width: auto;
+  aspect-ratio: auto;
+  font-size: 1.5rem; /* Ajuste si besoin */
+  margin: 0 1rem;
+}
+
+.controls button.backward i,
+.controls button.forward i {
+  color: white !important;
 }
 
 .controls button:is(:hover, :focus-visible) {
@@ -179,6 +196,10 @@
 
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
+}
+
+.music-player i.fa-solid {
+  color: black;
 }
 @media (max-width: 768px) {
   .audio-ui-container {
