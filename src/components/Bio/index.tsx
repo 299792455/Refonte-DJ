@@ -54,7 +54,7 @@ export default function Bio() {
             
             
           </div>
-          <button className="spotify-btn">Escuchar</button>
+          <a href="#beats" className="spotify-btn">Escuchar</a>
         </div>
 
         <div className="image-zone">

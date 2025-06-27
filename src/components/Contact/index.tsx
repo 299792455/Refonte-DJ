@@ -4,7 +4,7 @@ import { useState } from 'react';
 import '@/styles/ContactForm.css';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', telefono: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -20,12 +20,13 @@ export default function ContactForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: formData.email,
+        telefono: formData.telefono,
         message: formData.message,
       }),
     });
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '',telefono: '', message: '' });
   } catch (error) {
     console.error('Erreur:', error);
   }
@@ -40,6 +41,16 @@ export default function ContactForm() {
         <div className="email">
           <input type="email" placeholder="Tu email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
+        <div className="telefono">
+  <input
+    type="text"
+    placeholder="Tu teléfono"
+    name="telefono"
+    value={formData.telefono}
+    onChange={handleChange}
+    required
+  />
+</div>
         <div className="message">
           <textarea
             name="message"

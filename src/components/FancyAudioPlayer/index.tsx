@@ -26,7 +26,7 @@ export default function FancyAudioPlayer() {
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLInputElement>(null);
- const swiperRef = useRef<SwiperType | null>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     const fetchTracks = async () => {
@@ -38,19 +38,20 @@ export default function FancyAudioPlayer() {
   }, []);
 
   useEffect(() => {
-    if (audioRef.current) {
+    if (audioRef.current && tracks.length > 0) {
       audioRef.current.src = tracks[currentTrackIndex]?.musicFile;
-      audioRef.current.play();
-      setIsPlaying(true);
     }
-  }, [currentTrackIndex]);
+  }, [currentTrackIndex, tracks]);
 
   const playPause = () => {
     if (!audioRef.current) return;
 
     if (audioRef.current.paused) {
-      audioRef.current.play();
-      setIsPlaying(true);
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.warn('Lecture bloquée :', err);
+      });
     } else {
       audioRef.current.pause();
       setIsPlaying(false);
@@ -84,16 +85,20 @@ export default function FancyAudioPlayer() {
   const handleMetadataLoaded = () => {
     if (!audioRef.current || !progressRef.current) return;
     progressRef.current.max = String(audioRef.current.duration);
+    audioRef.current.play().then(() => {
+      setIsPlaying(true);
+    }).catch((err) => {
+      console.warn('Lecture auto bloquée :', err);
+    });
   };
 
   return (
     <div className="audio-ui-container">
       <div className="hero-block">
-  <div className="hero-line"><span>M</span><span>Y</span></div>
-  <div className="hero-line"><span>B</span><span>E</span><span>A</span><span>T</span><span>S</span></div>
-</div>
+        <div className="hero-line"><span>M</span><span>Y</span></div>
+        <div className="hero-line"><span>B</span><span>E</span><span>A</span><span>T</span><span>S</span></div>
+      </div>
 
-    
       <div className="album-cover">
         <Swiper
           modules={[EffectCoverflow]}
@@ -111,10 +116,10 @@ export default function FancyAudioPlayer() {
             <SwiperSlide key={track._id} className="swiper-slide">
               <img src={track.coverImage} alt={track.title} />
               {/* <div className="overlay">
-  <a href="#" target="_blank">
-    <ion-icon name="logo-youtube"></ion-icon>
-  </a>
-</div> */}
+                <a href="#" target="_blank">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </div> */}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -150,7 +155,6 @@ export default function FancyAudioPlayer() {
             <button className="forward" onClick={nextTrack}>
               <i className="fa-solid fa-forward"></i>
             </button>
-            
           </div>
         </div>
       )}
