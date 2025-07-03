@@ -15,7 +15,7 @@
     "@react-three/fiber": "^9.1.2",
     "ionicons": "^8.0.8",
     "mongoose": "^8.14.1",
-    "next": "15.3.2",
+    "next": "15.3.3",
     "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
