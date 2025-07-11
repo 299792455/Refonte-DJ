@@ -1,0 +1,17 @@
+{
+  "name": "Sergio Telmo",
+  "short_name": "Dj Telmo",
+  "description": "Dj Urban Music",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030312",
+  "theme_color": "#5e52d3",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "fr"
+}

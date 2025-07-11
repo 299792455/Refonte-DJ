@@ -59,7 +59,7 @@ export default function CarouselBrand() {
   }, []);
 
   return (
-    <div className="left-0 w-full z-40 overflow-hidden border-t border-b border-[#1ed760] py-4 !py-4">
+    <div className="left-0 w-full z-40 overflow-hidden  py-4 !py-4">
       <div ref={trackRef} className="flex whitespace-nowrap will-change-transform gap-12" />
     </div>
   );

@@ -11,7 +11,10 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: 'DJ Sergio Telmo',
-  description: 'Site officiel de DJ Sergio Telmo',
+  description: 'DJ Sergio Telmo - Sitio Oficial',
+openGraph: {
+    images: ['https://djsergiotelmo.com/meta-cover.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,13 +24,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="Site officiel de DJ Sergio Telmo" />
+  <meta name="description" content="DJ Sergio Telmo - Sitio Oficial" />
   <meta property="og:title" content="DJ Sergio Telmo" />
-  <meta property="og:description" content="Site officiel de DJ Sergio Telmo" />
+  <meta property="og:description" content="Sitio Oficial de DJ Sergio Telmo" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://djsergiotelmo.com" />
-  <meta property="og:image" content="/meta-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+<meta name="google-site-verification" content="cWlnPNgIbN4GmqCr7TNP3xmRNtqcet0vxA7MOK_s5Mo" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
