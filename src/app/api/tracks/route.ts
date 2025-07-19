@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/mongodb';
 import mongoose from 'mongoose';
 
-const BASE_AUDIO_URL = 'https://djsergiotelmo.com/musicFile/';
-const BASE_IMAGE_URL = 'https://djsergiotelmo.com/coverImages/';
+const BASE_AUDIO_URL = '/musicFiles/';
+const BASE_IMAGE_URL = '/coverImages/';
 
 const TrackSchema = new mongoose.Schema({
   title: { type: String, required: true, trim: true },
